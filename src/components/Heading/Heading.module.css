@@ -1,8 +1,12 @@
 .site-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    align-self: flex-start;
+}
+.block-title {
     font-size: 24px;
     font-weight: 700;
-}
-.blobk-title {
-    font-size: 18px;
-    font-weight: 400;
+    margin-bottom: 20px;
+    align-self: flex-start;
 }

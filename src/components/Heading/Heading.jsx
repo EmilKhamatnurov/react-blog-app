@@ -3,10 +3,10 @@ import styles from './Heading.module.css'
 
 function Heading({level, text}) {
     if (level === 'h1') {
-        return( <h1 className={styles['title-input']}>{text}</h1>)
+        return( <h1 className={styles['site-title']}>{text}</h1>)
     }
     if (level === 'h2') {
-        return( <h2 className={styles['description-input']}>{text}</h2>)
+        return( <h2 className={styles['block-title']}>{text}</h2>)
     }
 }
 

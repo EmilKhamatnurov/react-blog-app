@@ -4,15 +4,15 @@ import styles from './Button.module.css'
 function Button({type, text, onClick, styleClass}) {
     return(
         <button 
-            type={type} 
+            // type={type} 
             onClick={onClick}
             className={styles[styleClass]}>{text}
         </button>
     )
 }
 Button.defaultProps = {
-    type: 'submit', 
-    text: 'Отправить',
+    // type: 'submit', 
+    text: 'Опубликовать',
     onClick: () => {console.log("Отправлено")},
     styleClass: 'sumbit-btn'
 }

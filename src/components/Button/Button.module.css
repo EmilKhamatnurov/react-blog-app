@@ -4,7 +4,7 @@
     justify-content: center;
     align-self: flex-start;
     font-family: inherit;
-    color: #717171;
+    color: #a5a5a5;
     font-weight: 600;
     width: 40%;
     background: #313131;
@@ -20,3 +20,32 @@
     background-color: #fff;
     border-color: #fff;
 }
+/* .sumbit-btn:active {
+    scale: 0.95;
+} */
+.sumbit-btn:hover::before {
+    transform: scaleX(1);
+  }
+  
+.sumbit-btn {
+position: relative;
+z-index: 1;
+}
+  
+.sumbit-btn::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+transform: scaleX(0);
+transform-origin: 0 50%;
+width: 100%;
+height: inherit;
+border-radius: inherit;
+background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+);
+transition: all 0.475s;
+}  
