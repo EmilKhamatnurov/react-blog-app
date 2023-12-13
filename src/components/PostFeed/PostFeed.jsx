@@ -4,8 +4,6 @@ import NormalizePosts from '../../utils/normalize-posts';
 // components
 import Post from '../Post/Post';
 import Heading from '../Heading/Heading';
-import Container from '../Utils/Container/Container';
-
 
 function PostFeed() {
     // States
@@ -28,14 +26,12 @@ function PostFeed() {
         <>
             <Heading
                 text='Лента новостей'/>
-                {/* POSTS */}
-                {postIds ? postIds.map(id => (
-                    <Post
-                        key={id}
-                        title = {postsById[id].title}
-                        description={postsById[id].body}/>
-                )) : 
-                'Пока нет постов'}
+            {postIds ? postIds.map(id => (
+                <Post
+                    key={id}
+                    title = {postsById[id].title}
+                    description={postsById[id].body}/>
+            )) : 'Пока нет постов'}
         </>
       );      
 }

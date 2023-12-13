@@ -5,21 +5,20 @@ import Container from './components/Utils/Container/Container';
 import PostFeed from './components/PostFeed/PostFeed';
 
 function App() {
-  return(
+    return(
     <>
-      <Container>
-        <Heading
-          level='h1'
-          text='Приложение Блог'/>
-        <Container styleClass={'flex-container-row'}>
-           <Form/>
-           <Container styleClass='flex-container-column'>
-            <PostFeed/>
-           </Container>
-           
+        <Container>
+            <Heading
+                level='h1'
+                text='Приложение Блог'/>
+            <Container styleClass={'flex-container-row'}>
+                <Form/>
+                <Container styleClass='flex-container-column'>
+                    <PostFeed/>
+                </Container>
+            </Container>
         </Container>
-      </Container>
     </>
-  )
+    )
 }
 export default App;
