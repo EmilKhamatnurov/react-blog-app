@@ -1,24 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { getPosts } from '../../api/posts';
-import NormalizePosts from '../../utils/normalize-posts';
+import React from 'react';
 // components
 import Post from '../Post/Post';
 import Heading from '../Heading/Heading';
 
-function PostFeed() {
-    // States
-    const [postIds, setPostIds] = useState([]);
-    const [postsById, setPostsById] = useState(null);
-    // Checking data
-    useEffect(() => {
-        getPosts()
-        .then(posts => {
-            const [ids, byIds] = NormalizePosts(posts);
-            setPostIds(ids);
-            setPostsById(byIds);
-        })
-        .catch(error => {console.log("Error: ", error);})
-    }, []);
+function PostFeed({postIds, postsById}) {
+    
+   
 
     //Render
 

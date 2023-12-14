@@ -4,7 +4,7 @@ import Input from '../Input/Input';
 import Button from '../Button/Button';
 import styles from './Form.module.css'
 
-function Form() {
+function Form({onAppBtnClick}) {
     const [form, setForm] = useState({
         title: '',
         description: '',
@@ -15,10 +15,6 @@ function Form() {
             ...form, 
             [name]: value
         })
-    }
-    function handleAddPostBtnClick(event) {
-        event.preventDefault();
-        console.log("Привет");
     }
 
     return(
@@ -41,7 +37,10 @@ function Form() {
             <Button
                 type='submit'
                 text='Отправить'
-                onClick={(e) => handleAddPostBtnClick(e)}/>
+                onClick={(e) => {
+                    e.preventDefault()
+                    onAppBtnClick(form)
+                    }}/>
         </form>
     )
 }
