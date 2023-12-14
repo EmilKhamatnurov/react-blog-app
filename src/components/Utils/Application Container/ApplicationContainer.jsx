@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 import NormalizePosts from '../../../utils/normalize-posts';
-import {getPosts} from '../../../Api/posts.js'
+import {getPosts, addPost} from '../../../Api/posts.js'
 import Form from '../../Form/Form';
 import Container from '../Container/Container';
 import PostFeed from '../../PostFeed/PostFeed';
@@ -22,9 +22,22 @@ function ApplicationContainer() {
         .catch(error => {console.log("Error: ", error);})
     }, []);
 
-
     function handleAddNewPost(newPost) {
-
+        addPost(newPost)
+            .then(post => {
+                console.log(post.id, post['post']);
+                setPostIds([post.id, ...postIds])
+                setPostsById({
+                    [post.id]: {
+                        title: post['post'].title,
+                        body: post['post'].description
+                    },
+                    ...postsById
+                })
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
 
     return ( 

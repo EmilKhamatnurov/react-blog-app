@@ -4,11 +4,6 @@ import Post from '../Post/Post';
 import Heading from '../Heading/Heading';
 
 function PostFeed({postIds, postsById}) {
-    
-   
-
-    //Render
-
     return ( 
         <>
             <Heading
