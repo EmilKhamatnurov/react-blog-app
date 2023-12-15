@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 import NormalizePosts from '../../../utils/normalize-posts';
-import {getPosts, addPost} from '../../../Api/posts.js'
+import {getPosts, addPost,deletePost} from '../../../Api/posts.js'
 import Form from '../../Form/Form';
 import Heading from '../../Heading/Heading.jsx';
 import Container from '../Container/Container';
@@ -57,7 +57,7 @@ function ApplicationContainer() {
 
     function handleDeletePost(id) {
         setPostIds(postIds.filter(postId => postId !== id));
-        console.log(id);
+        deletePost(id)
     }
 // Render
     return ( 

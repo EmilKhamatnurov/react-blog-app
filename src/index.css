@@ -6,3 +6,13 @@ body, html {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 }
+/* Скрываем scrollbar для Chrome, Safari и Opera */
+.example::-webkit-scrollbar {
+    display: none;
+  }
+   
+  /* Скрываем scrollbar для IE, Edge и Firefox */
+  .example {
+    -ms-overflow-style: none;  /* IE и Edge */
+    scrollbar-width: none;  /* Firefox */
+  }

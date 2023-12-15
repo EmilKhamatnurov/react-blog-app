@@ -17,8 +17,7 @@
     border-radius: 6px;
 }
 .sumbit-btn:hover {
-    background-color: #fff;
-    border-color: #fff;
+    background: #6a006e;
 }
 /* .sumbit-btn:active {
     scale: 0.95;
@@ -50,6 +49,9 @@
     transition: all 0.475s;
 }  
 .sumbit-btn:disabled {
+    opacity: 0.5;
+}
+.sumbit-btn:disabled:hover {
     opacity: 0.5;
 }
 

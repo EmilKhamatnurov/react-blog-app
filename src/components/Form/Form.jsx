@@ -17,9 +17,9 @@ function Form({onAppBtnClick}) {
         })
     }
     function isEmptyForm() {
-        console.log(Boolean(form.title), Boolean(form.description));
         return Boolean(form.title) && Boolean(form.description)
     }
+    
     return(
         <form className={styles['form-container']}>
             <Heading
