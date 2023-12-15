@@ -4,11 +4,11 @@
     justify-content: center;
     align-self: flex-start;
     font-family: inherit;
-    color: #a5a5a5;
+    color: #f8f8f8;
     font-weight: 600;
     width: 40%;
-    background: #313131;
-    border: 1px solid #414141;
+    background: #4b004d;
+    border: none;
     padding: 12px 16px;
     font-size: inherit;
     gap: 8px;
@@ -49,6 +49,9 @@
     );
     transition: all 0.475s;
 }  
+.sumbit-btn:disabled {
+    opacity: 0.5;
+}
 
 .delete-btn {
     background: rgb(90, 0, 32);

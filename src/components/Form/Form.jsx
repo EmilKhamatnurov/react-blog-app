@@ -16,7 +16,10 @@ function Form({onAppBtnClick}) {
             [name]: value
         })
     }
-
+    function isEmptyForm() {
+        console.log(Boolean(form.title), Boolean(form.description));
+        return Boolean(form.title) && Boolean(form.description)
+    }
     return(
         <form className={styles['form-container']}>
             <Heading
@@ -37,6 +40,7 @@ function Form({onAppBtnClick}) {
             <Button
                 type='submit'
                 text='Отправить'
+                isDisabled={!isEmptyForm()}
                 onClick={(e) => {
                     e.preventDefault()
                     onAppBtnClick(form)
