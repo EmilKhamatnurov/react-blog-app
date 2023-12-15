@@ -61,15 +61,10 @@ function ApplicationContainer() {
     }
 // Render
     return ( 
-        <Container styleClass={['flex-container-row']}>
-            <Container styleClass={['flex-container-column']}>
-                <Heading
-                    level='h2'
-                    text='Новый пост'/>
-                <Form
-                    onAppBtnClick={handleAddNewPost}/>
-            </Container>
-            <Container styleClass={['flex-container-column', 'flex-container-column_bordered']}>
+        <Container styleClass='flex-container-row'>
+            <Form
+                onAppBtnClick={handleAddNewPost}/>
+            <Container styleClass='flex-container-column'>
                 <Heading
                     text='Лента новостей'/>
                 {isError && 'Ошибка данных'}
