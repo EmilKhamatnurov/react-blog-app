@@ -19,12 +19,8 @@ function Form({onAppBtnClick}) {
     function isEmptyForm() {
         return Boolean(form.title) && Boolean(form.description)
     }
-    
     return(
         <form className={styles['form-container']}>
-            <Heading
-                level='h2'
-                text='Новый пост'/>
             <Input 
                 type='input'
                 text='Заголовок'

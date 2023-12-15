@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import styles from './Container.module.css'
 
 function Container({children, styleClass}) {
+    const containerStyles = styleClass.map(className => styles[className]);
     return(
     <div 
-        className={styles[styleClass]}>{children}
+        className={containerStyles}>{children}
     </div>)
 }
 Container.defaultProps = {

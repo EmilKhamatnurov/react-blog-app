@@ -11,10 +11,6 @@ function Post({title, description, onDeleteBtnClick}) {
                 onClick={onDeleteBtnClick}
                 styleClass='delete-btn'
                 text='Удалить пост'/>
-            {/* <button
-                onClick={onDeleteBtnClick} 
-                className={btnStyles['delete-btn']}>Удалить пост
-            </button> */}
         </div>
     );
 }
