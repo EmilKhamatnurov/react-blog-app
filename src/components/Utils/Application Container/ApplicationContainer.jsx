@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import NormalizePosts from '../../../utils/normalize-posts';
 import {getPosts, addPost} from '../../../Api/posts.js'
 import Form from '../../Form/Form';
+import Heading from '../../Heading/Heading.jsx';
 import Container from '../Container/Container';
 import Loader from '../../Loader/Loader';
 import PostFeed from '../../PostFeed/PostFeed';
@@ -53,17 +54,26 @@ function ApplicationContainer() {
                 console.log(error);
             })
     }
+
+    function handleDeletePost(id) {
+        setPostIds(postIds.filter(postId => postId !== id));
+        console.log(id);
+    }
 // Render
     return ( 
         <Container styleClass='flex-container-row'>
             <Form
                 onAppBtnClick={handleAddNewPost}/>
             <Container styleClass='flex-container-column'>
+                <Heading
+                    text='Лента новостей'/>
                 {isError && 'Ошибка данных'}
-                {!isLoading && <Loader/>}
+                {isLoading ? <Loader/> 
+                : 
                 <PostFeed
+                    onDeleteBtnClick={handleDeletePost}
                     postIds={postIds}
-                    postsById={postsById}/>
+                    postsById={postsById}/>}
             </Container>
         </Container>
     );

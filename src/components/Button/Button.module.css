@@ -28,24 +28,39 @@
   }
   
 .sumbit-btn {
-position: relative;
-z-index: 1;
+    position: relative;
+    z-index: 1;
 }
   
 .sumbit-btn::before {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-transform: scaleX(0);
-transform-origin: 0 50%;
-width: 100%;
-height: inherit;
-border-radius: inherit;
-background: linear-gradient(
-    82.3deg,
-    rgba(150, 93, 233, 1) 10.8%,
-    rgba(99, 88, 238, 1) 94.3%
-);
-transition: all 0.475s;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+        82.3deg,
+        rgba(150, 93, 233, 1) 10.8%,
+        rgba(99, 88, 238, 1) 94.3%
+    );
+    transition: all 0.475s;
 }  
+
+.delete-btn {
+    background: rgb(90, 0, 32);
+    border: 1px linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(153,20,20,1) 35%, rgba(65,213,244,1) 100%);
+    padding: 5px 20px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 7px;
+    border: none;
+    font-size: 18px;
+    color: white;
+}
+.delete-btn:hover {
+    background: rgb(131, 0, 17);
+}

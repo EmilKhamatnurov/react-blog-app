@@ -26,3 +26,8 @@ export function addPost(post) {
             return response.json()
         })   
 }
+export function deletePost(id) {
+    fetch(`${BASE_URL}/${id}`, {
+    method: 'DELETE',
+});
+}

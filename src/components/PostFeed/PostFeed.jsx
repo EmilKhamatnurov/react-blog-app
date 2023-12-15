@@ -1,17 +1,14 @@
 import React from 'react';
 // components
 import Post from '../Post/Post';
-import Heading from '../Heading/Heading';
 
-function PostFeed({postIds, postsById}) {
+function PostFeed({postIds, postsById, onDeleteBtnClick}) {
     return ( 
-        <>
-            <Heading
-                text='Лента новостей'/>
-            
+        <>              
             {postIds ? postIds.map(id => (
                 <Post
                     key={id}
+                    onDeleteBtnClick={() => onDeleteBtnClick(id)}
                     title = {postsById[id].title}
                     description={postsById[id].body}/>
             )) : ''}

@@ -10,6 +10,7 @@ function App() {
             <Heading
                 level='h1'
                 text='Приложение Блог'/>
+                
             <ApplicationContainer/>
         </Container>
     </>
